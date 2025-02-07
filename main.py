@@ -27,11 +27,11 @@ def speech_to_text():
 st.title("Your :green[Friendly] Better :blue[AI] Teacher:")
 st.text("By Taksha...")
 
-# **Place the ad code at the top to make sure it's part of the initial page load**
+# **Inject ad directly with st.markdown to ensure it is visible in HTML source immediately**
 ad_code = """
 <iframe data-aa='2380494' src='//ad.a-ads.com/2380494?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
 """
-st.components.v1.html(ad_code, height=90)
+st.markdown(ad_code, unsafe_allow_html=True)
 
 user_prompt = st.text_input("Write your prompt:")
 response_text = ""
