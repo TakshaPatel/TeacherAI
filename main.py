@@ -2,12 +2,15 @@ import streamlit as st
 import google.generativeai as genai
 import speech_recognition as sr
 import pyttsx3
+import os
+from dotenv import load_dotenv
 
-#API(plz dont steal)
-genai.configure(api_key="AIzaSyA4EXQew6Oz1ON-O05DGXRtLJIIt-dFR9Y")
+# Configure Gemini API
+load_dotenv()
+genai.configure(api_key=os.getenv(API_KEY))
 model = genai.GenerativeModel("gemini-1.5-flash")
 
-#bad speech-to-text
+# Speech-to-Text Function
 def speech_to_text():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
