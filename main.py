@@ -33,9 +33,14 @@ if st.button("🎙 Speak to it (might not work, idk)"):
     user_prompt = speech_to_text()
 if user_prompt:
     response = model.generate_content(
-        "You have to be good at teaching, do not use big vocab words. Do not be mean to me You have to be Extreamly helpful, try to also add jokes at the end of your paragraphs that relate with the topic That I say: " + user_prompt
+        "You have to be good at teaching, do not use big vocab words. Do not be mean to me. You have to be extremely helpful, try to also add jokes at the end of your paragraphs that relate to the topic I say: " + user_prompt,
+        stream=True
     )
-    response_text = response.text
+
+    response_text = ""
+    for chunk in response:
+        if hasattr(chunk, "text") and chunk.text:
+            response_text += chunk.text
 
 
 st.text_area("Teacher says:", response_text, height=200)
