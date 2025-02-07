@@ -29,10 +29,19 @@ st.text("By Taksha           (Please know I do not control the ads shown)")
 
 # Adsterra Ad Integration (JavaScript to iframe)
 ad_code = """
-<iframe src="https://www.highperformanceformat.com/636d00d3d45691d4d185b42d691c47f3/invoke.js"
-style="width:728px; height:90px; border:0px;"></iframe>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '636d00d3d45691d4d185b42d691c47f3',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/636d00d3d45691d4d185b42d691c47f3/invoke.js"></scr' + 'ipt>');
+</script>
 """
 
+# Display the ad
 st.components.v1.html(ad_code, height=90)
 
 user_prompt = st.text_input("Write your prompt:")
