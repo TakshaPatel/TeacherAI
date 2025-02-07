@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 # Configure Gemini API
 load_dotenv()
-genai.configure(api_key=os.getenv(API_KEY))
+genai.configure(api_key=os.getenv("API_KEY"))
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Speech-to-Text Function
