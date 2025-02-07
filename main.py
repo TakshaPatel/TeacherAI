@@ -48,9 +48,11 @@ if user_prompt:
 # Display Response Text
 st.text_area("Teacher says:", response_text, height=200)
 
-# Ad Embed
-st.text("Learn what you need in minutes: It is very friendly, 👍👍👍")
+# Ad Embed (Place it immediately after the content to ensure visibility on page load)
 ad_code = """
 <iframe data-aa='2380494' src='//ad.a-ads.com/2380494?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
 """
 st.components.v1.html(ad_code, height=90)
+
+# Footer Text
+st.text("Learn what you need in minutes: It is very friendly, 👍👍👍")
