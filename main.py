@@ -3,11 +3,11 @@ import google.generativeai as genai
 import speech_recognition as sr
 import pyttsx3
 
-# Configure Gemini API
+#API(plz dont steal)
 genai.configure(api_key="AIzaSyA4EXQew6Oz1ON-O05DGXRtLJIIt-dFR9Y")
 model = genai.GenerativeModel("gemini-1.5-flash")
 
-# Speech-to-Text Function
+#bad speech-to-text
 def speech_to_text():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
