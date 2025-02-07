@@ -25,13 +25,24 @@ def speech_to_text():
 
 # Streamlit UI
 st.title("Your :green[Friendly] Better :blue[AI] Teacher:")
-st.text("By Taksha...")
+st.text("By Taksha           (Please know I do not control the ads shown)")
 
-# **Inject ad directly with st.markdown to ensure it is visible in HTML source immediately**
+# Adsterra Ad Integration (JavaScript to iframe)
 ad_code = """
-<iframe data-aa='2380494' src='//ad.a-ads.com/2380494?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '636d00d3d45691d4d185b42d691c47f3',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/636d00d3d45691d4d185b42d691c47f3/invoke.js"></scr' + 'ipt>');
+</script>
 """
-st.markdown(ad_code, unsafe_allow_html=True)
+
+# Display the ad
+st.components.v1.html(ad_code, height=90)
 
 user_prompt = st.text_input("Write your prompt:")
 response_text = ""
