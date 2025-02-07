@@ -46,3 +46,8 @@ if user_prompt:
 st.text_area("Teacher says:", response_text, height=200)
 
 st.text("Learn what you need in minutes: It is very friendly, 👍👍👍")
+ad_code = """
+<iframe data-aa='2380494' src='//ad.a-ads.com/2380494?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+"""
+
+st.components.v1.html(ad_code, height=90)
