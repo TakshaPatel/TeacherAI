@@ -41,22 +41,12 @@ if user_prompt:
         if hasattr(chunk, "text") and chunk.text:
             response_text += chunk.text
 
-st.text_area("Teacher says:", response_text, height=200)
+st.text_area("Teacher says:", response_text, height=375)
 st.text("Learn what you need in minutes: It is very friendly, 👍👍👍")
 
-# Ads
 ad_code = """
-<script type="text/javascript">
-	atOptions = {
-		'key' : '636d00d3d45691d4d185b42d691c47f3',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.highperformanceformat.com/636d00d3d45691d4d185b42d691c47f3/invoke.js"></scr' + 'ipt>');
-</script>
+<iframe src="//www.highperformanceformat.com/636d00d3d45691d4d185b42d691c47f3/invoke.js"
+        width="728" height="90" style="border:none;overflow:hidden" scrolling="no">
+</iframe>
 """
-
-
 st.components.v1.html(ad_code, height=90)
