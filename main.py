@@ -22,7 +22,7 @@ def speech_to_text():
             return "API error, contact developer."
 
 st.title("Very Important School Project")
-st.text("By Taksha           (Please know I do not control the ads shown)")
+st.text("This is a Computer Science Project, Where We try to make an Chat with a random Stranger app.")
 
 user_prompt = st.text_area("Prompt:", height=75)
 response_text = ""
