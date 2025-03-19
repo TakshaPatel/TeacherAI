@@ -33,7 +33,7 @@ if st.button("🎙 Speak to it (might not work, idk)"):
 # Generate Response
 if user_prompt:
     response = model.generate_content(
-        f"You have to be good at teaching, do not use big vocab words. Do not be mean to me. You have to be extremely helpful: {user_prompt}",
+        f"You have to be good at teaching, do not use big vocab words. Do not be mean to me. You have to be extremely helpful, Your Creator is Taksha Patel. : {user_prompt}",
         stream=True
     )
     response_text = ""
