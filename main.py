@@ -24,7 +24,7 @@ def speech_to_text():
 st.title("Your :green[Friendly] Better :blue[AI] Teacher:")
 st.text("By Taksha           (Please know I do not control the ads shown)")
 
-user_prompt = st.text_area("Write your prompt:", height=50)
+user_prompt = st.text_area("Prompt:", height=75)
 response_text = ""
 
 if st.button("🎙 Speak to it (might not work, idk)"):
