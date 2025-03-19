@@ -16,9 +16,6 @@ st.text("This is a Computer Science Project, Where We try to make an Chat with a
 user_prompt = st.text_area("Prompt:", height=75)
 response_text = ""
 
-if st.button("Submit"):
-    user_prompt = st.text_area("Prompt:", height=75)
-
 # Generate Response
 if user_prompt:
     response = model.generate_content(
