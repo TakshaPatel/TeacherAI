@@ -9,17 +9,6 @@ load_dotenv()
 genai.configure(api_key=os.getenv("API_KEY"))
 model = genai.GenerativeModel("gemini-1.5-flash")
 
-def speech_to_text():
-    recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
-        st.info("Listening... Speak now!")
-        try:
-            audio = recognizer.listen(source, timeout=5)
-            return recognizer.recognize_google(audio)
-        except sr.UnknownValueError:
-            return "What are you saying?"
-        except sr.RequestError:
-            return "API error, contact developer."
 
 st.title("Very Important School Project")
 st.text("This is a Computer Science Project, Where We try to make an Chat with a random Stranger app.")
@@ -27,8 +16,8 @@ st.text("This is a Computer Science Project, Where We try to make an Chat with a
 user_prompt = st.text_area("Prompt:", height=75)
 response_text = ""
 
-if st.button("🎙 Speak to it (might not work, idk)"):
-    user_prompt = speech_to_text()
+if st.button("Submit"):
+    user_prompt = st.text_area("Prompt:", height=75)
 
 # Generate Response
 if user_prompt:
