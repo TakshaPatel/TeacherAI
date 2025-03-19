@@ -21,7 +21,7 @@ def speech_to_text():
         except sr.RequestError:
             return "API error, contact developer."
 
-st.title("Your :green[Friendly] Better :blue[AI] Teacher:")
+st.title("Some random AI")
 st.text("By Taksha           (Please know I do not control the ads shown)")
 
 user_prompt = st.text_area("Prompt:", height=75)
